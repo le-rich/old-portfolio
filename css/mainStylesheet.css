@@ -1,0 +1,19 @@
+.card{
+	height: 100%;
+	vertical-align: middle; 
+	align-content: center; 
+	text-align: center;
+	margin-top: 50%;
+	margin-bottom: 50%;
+}
+
+canvas{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -100;
+}
+
+
+
+
