@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/le-rich/portfolio-website/issues"
   },
-  "homepage": "https://github.com/le-rich/portfolio-website#readme"
+  "homepage": "https://github.com/le-rich/portfolio-website#readme",
+  "dependencies": {}
 }
