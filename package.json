@@ -1,0 +1,19 @@
+{
+  "name": "richard-portfolio",
+  "version": "1.0.0",
+  "description": "A portfolio website for Richard Le",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/le-rich/portfolio-website.git"
+  },
+  "author": "Richard Le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/le-rich/portfolio-website/issues"
+  },
+  "homepage": "https://github.com/le-rich/portfolio-website#readme"
+}
