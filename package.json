@@ -16,5 +16,7 @@
     "url": "https://github.com/le-rich/portfolio-website/issues"
   },
   "homepage": "https://github.com/le-rich/portfolio-website#readme",
-  "dependencies": {}
+  "dependencies": {
+    "particles.js": "^2.0.0"
+  }
 }
