@@ -84,6 +84,13 @@
 	border-radius: 2px;
 	align-content: center;
 }
+#effectCanvas{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
 
 #background{
 	height: 100%;
@@ -91,6 +98,11 @@
 	position: absolute;
 	top: 0;
 	z-index: -100;
+}
+
+.particles-js-canvas-el{
+	visibility: hidden;
+
 }
 
 #interactionArea{
