@@ -89,6 +89,12 @@
 	width: 100%;
 	position: absolute;
 	top: 0;
+	z-index: 2;
+}
+
+#threeCanvas{
+	position: absolute;
+	top: 0;
 	z-index: 1;
 }
 
@@ -98,11 +104,6 @@
 	position: absolute;
 	top: 0;
 	z-index: -100;
-}
-
-.particles-js-canvas-el{
-	visibility: hidden;
-
 }
 
 #interactionArea{
