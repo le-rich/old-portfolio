@@ -22,12 +22,35 @@ var icoMaterial = new THREE.MeshBasicMaterial({ color: 0x606060, wireframe: true
 var wireFrameIco = new THREE.Mesh(icoGeo, icoMaterial);
 
 
+var textureLoader = new THREE.TextureLoader();
+var partSprite = textureLoader.load('assets/circle.png');
+
+var partGeo = new THREE.Geometry();
+
+for(var i = 0; i < 10000; i++){
+	var star = new THREE.Vector3();
+	star.x = THREE.Math.randFloatSpread( 2000 );
+	star.y = THREE.Math.randFloatSpread( 2000 );
+	star.z = THREE.Math.randFloatSpread( 2000 );
+
+	partGeo.vertices.push( star );
+}
+
+var partMaterial = new THREE.PointsMaterial({size: 1, map: partSprite, color: 0x000000});
+var particles = new THREE.Points(partGeo, partMaterial);
+particles.position.z = -5;
 pointLight.position.set(25, 50, 25);
 
 scene.add(wireFrameIco);
 scene.add(pointLight);
 scene.add(ambientLight);
-scene.add( cube );
+scene.add(cube);
+scene.add(particles);
+
+cube.position.x = 2.5;
+wireFrameIco.position.x = 2;
+
+
 
 camera.position.z = 5;
 
@@ -39,6 +62,8 @@ var animate = function () {
 
 	wireFrameIco.rotation.x -= 0.001;
 	wireFrameIco.rotation.y -= 0.001;
+
+	particles.rotation.y += 0.0002;
 
 	renderer.render( scene, camera );
 }
@@ -52,10 +77,12 @@ function onWindowResize(){
     camera.updateProjectionMatrix();
 
     renderer.setSize( window.innerWidth, window.innerHeight );
-
+    $(".sideNav").height($("#interactionArea").height());
 }
 
-
+$(document).ready(function(){
+	$(".sideNav").height($("#background").height());
+});
 
 
 

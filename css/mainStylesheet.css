@@ -1,89 +1,91 @@
-#title{
-	margin-top: 2%;
-	position: absolute;
-	text-align: center;
-    width: 100%;
-    min-height: 20%;
-	font-weight: 400;
-	font-size: 4em;
-	letter-spacing: 15px;
-	vertical-align: middle;
-}
 
-#titleLine{
-	width: 15%;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
-#titleDesc{
-	font-size: 0.5em;
-	letter-spacing: 4px;
-}
-
-#leftCard{
-	margin-right: 0;
-	margin-left: auto;
-}
-#leftTitle{
-	margin-top: 40%;
-}
-
-#rightTitle{
-	margin-top: 40%;
-}
-
-
-#rightCard{
-	margin-left: 0;
-	margin-right: auto;
-}
-
-#profileHolder{
-	width: 15%;
-}
-
-#profileCard{
-	border: none;
-}
-
-#profileCircle{
-	height: 100px;
-	width: 100px;
-	margin-top: 25%;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-.subTitle{
-	font-size: 2em;
-	letter-spacing: 3px;
-	font-weight: 400;
-}
-
-.cardHolder{
-	/*Position relative makes sure that the element is placed 50% relative to itself, not the container.*/
-	position: relative;
-	align-content: center;
-	text-align: center;	
+.sideNav{
+	max-width: 15%;
+	min-width: 10%;
+	top: 0;
+	left: 0;
+	margin-right:  0;
+	font-family: Montserrat, sans-serif;
 	float: left;
-	width: 42.5%;
-	height: 100%;
+	background: white;
 }
 
-.card{
-	position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 45%;
-    height: 55%;
-    margin: auto;
-	border: 1.5px solid #f7f7f7;
-	border-radius: 2px;
-	align-content: center;
+.sideNav a {
+    margin: 20px;
+    text-decoration: none;
+    height: 2em;
+    min-width: 4%;
+    font-size: 1em;
+    display: block;
+    color: black;
 }
+
+#title{
+	font-size: 5em;
+	font-weight: 600;
+	margin-left: 50px;
+	float: left;
+	letter-spacing: 5px;
+	margin-top: 30%;
+}
+
+#subTitle{
+	font-size: 0.5em;
+	font-weight: 400;
+	letter-spacing: normal;
+}
+
+#menuToggle input
+{
+
+  display: block;
+  width: 40px;
+  height: 32px;
+  top: 0px;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 20px;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  margin-left: 18px;
+  
+  background: #000000;
+  border-radius: 3px;
+  
+  z-index: 1;
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#hamburgerButton{
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
 #effectCanvas{
 	height: 100%;
 	width: 100%;
@@ -108,6 +110,7 @@
 
 #interactionArea{
 	position: absolute;
+	margin-left: 5%;
 	height: 100%;
 	width: 100%;
 }
@@ -120,19 +123,22 @@ body{
 	margin: 0;
 	min-width: 100%;
 	min-height: 100%;
+	overflow: hidden;
 }
 
 html{
-	background-image: linear-gradient(0deg, #3a3a3a 0%, black 100%);
+	/*background-image: linear-gradient(0deg, #303030 0%, black 100%);*/
+	background-color: white;
 	height: 100%;
 	width: 100%;
+	font-family: Cormorant;
+	color: black;
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
 }
 
 *{
-	font-family: Cormorant Infant;
-	color: white;
-	-webkit-font-smoothing: antialiased;
-  	-moz-osx-font-smoothing: grayscale;
+	
 }
 
 

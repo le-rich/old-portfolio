@@ -51,21 +51,21 @@ particlesJS('background',
         }
       },
       "size": {
-        "value": 2,
+        "value": 1,
         "random": true,
         "anim": {
           "enable": false,
-          "speed": 20,
+          "speed": 10,
           "size_min": 0.1,
           "sync": false
         }
       },
       "line_linked": {
         "enable": true,
-        "distance": 150,
+        "distance": 75,
         "color": "#f7f7f7",
-        "opacity": 0.2,
-        "width": 1
+        "opacity": 0.1,
+        "width": 1.5
       },
       "move": {
         "enable": true,

@@ -3,10 +3,8 @@
 <head>
 	<title>Just Richard Things</title>
 	<link rel="stylesheet" type="text/css" href="css/mainStylesheet.css">
-	<link href="https://fonts.googleapis.com/css?family=Cormorant+Infant" rel="stylesheet">
-	<script type="text/javascript" src="libraries/seriously.js"></script>
-	<script type="text/javascript" src="libraries/effects/seriously.filmgrain.js"></script>
-	<script type="text/javascript" src="libraries/effects/seriously.vignette.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Cormorant" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.min.js"></script>
@@ -14,41 +12,20 @@
 	<div id="background">
 		<canvas id="effectCanvas">
 	</div>
-
-	<div id="interactionArea">
-		<div id="title">
-			Richard Le
-			<hr id="titleLine">
-			<div id="titleDesc">Student, Junior Developer</div>
-			
-		</div>
-		<div class="cardHolder">
-			<div id="leftCard" class="card">
-				<div id="leftTitle" class="subTitle">
-					PROJECTS
-				</div>	
+	<div class="sideNav">
+		<div id= "menuToggle">
+			<input type="checkbox" />
+			<div id="hamburgerButton">
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
+			<a href="About">ABOUT</a>
+			<a href="Projects">PROJECTS</a>
+			<a href="Curriculum Vitae">CURRICULUM VITAE</a>
 		</div>
-
-		<div id="profileHolder" class="cardHolder">
-			<div id="profileCard" class="card">
-				<img id="profileCircle" src="assets/circle.png">
-				<div class="subTitle">
-					ABOUT
-				</div>
-			</div>
-		</div>
-
-		<div class="cardHolder">
-			<div id="rightCard" class="card">
-				<div id="rightTitle" class="subTitle">
-					CURRICULUM
-					<br>
-					VITAE
-				</div>				
-			</div>
-		</div>
-	</div>	
+	</div>
+	<div id="title">RICHARD LE<br> <div id="subTitle">Student, Junior Developer</div></div>
 </div>
 
 
@@ -60,7 +37,8 @@ src="https://code.jquery.com/jquery-3.3.1.min.js"
 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 crossorigin="anonymous"></script>	
 <script type="text/javascript" src="js/particles.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<!-- <script type="text/javascript" src="js/main.js"></script> -->
 <script type="text/javascript" src="js/testScene.js"></script>
+<script type="text/javascript" src="js/postProcessingPass.js"></script>
 </body>
 </html>
