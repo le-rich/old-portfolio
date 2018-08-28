@@ -80,9 +80,29 @@ function onWindowResize(){
     $(".sideNav").height($("#interactionArea").height());
 }
 
+
 $(document).ready(function(){
 	$(".sideNav").height($("#background").height());
+	$("#menuToggle").click(function() {  //use a class, since your ID gets mangled
+    	$(this).toggleClass("is-active");      //add the class to the clicked element
+    	$(".sideNav").toggleClass("fadeInLeft");
+    	$(".sideNav").toggleClass("fadeOutLeft");
+  	});
+
+	$("#aboutButton").click(function(){
+		$("#about").fadeToggle("300");
+	});
+
+	$("#projectsButton").click(function(){
+		$("#projects").fadeToggle("300");
+	});
+
+	$("#cvButton").click(function(){
+		$("#cv").fadeToggle("300");
+	});
+
 });
+
 
 
 

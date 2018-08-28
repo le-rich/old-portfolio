@@ -7,7 +7,8 @@
 	margin-right:  0;
 	font-family: Montserrat, sans-serif;
 	float: left;
-	background: white;
+	background: white;\
+	opacity: 0;
 }
 
 .sideNav a {
@@ -20,13 +21,32 @@
     color: black;
 }
 
+#contentHolder{
+	height: 1080px;
+	margin-left: 10%;
+	align-content: middle;
+}
+
+.contentBlock{
+	height: 100%;
+	width: 100%;
+	background: white;
+	position: absolute;	
+	display: none;
+}
+
+#about{
+
+}
+
 #title{
 	font-size: 5em;
 	font-weight: 600;
-	margin-left: 50px;
+	margin-left: 13%;
 	float: left;
 	letter-spacing: 5px;
 	margin-top: 30%;
+	position: absolute;
 }
 
 #subTitle{
@@ -35,55 +55,12 @@
 	letter-spacing: normal;
 }
 
-#menuToggle input
-{
-
-  display: block;
-  width: 40px;
-  height: 32px;
-  top: 0px;
-  cursor: pointer;
-  position: absolute;
-  margin-left: 15px;
-  margin-top: 20px;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
+#sideHolder{
+	position: fixed;
 }
-
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  margin-left: 18px;
-  
-  background: #000000;
-  border-radius: 3px;
-  
-  z-index: 1;
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-#hamburgerButton{
-	margin-top: 20px;
-	margin-bottom: 40px;
+#menuToggle{
+	float: left;
+	width: 100%;
 }
 
 #effectCanvas{
@@ -123,7 +100,6 @@ body{
 	margin: 0;
 	min-width: 100%;
 	min-height: 100%;
-	overflow: hidden;
 }
 
 html{

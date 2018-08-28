@@ -5,40 +5,50 @@
 	<link rel="stylesheet" type="text/css" href="css/mainStylesheet.css">
 	<link href="https://fonts.googleapis.com/css?family=Cormorant" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
 </head>
 <body>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.min.js"></script>
-	
 	<div id="background">
 		<canvas id="effectCanvas">
-	</div>
-	<div class="sideNav">
-		<div id= "menuToggle">
-			<input type="checkbox" />
-			<div id="hamburgerButton">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-			<a href="About">ABOUT</a>
-			<a href="Projects">PROJECTS</a>
-			<a href="Curriculum Vitae">CURRICULUM VITAE</a>
 		</div>
-	</div>
-	<div id="title">RICHARD LE<br> <div id="subTitle">Student, Junior Developer</div></div>
-</div>
+		<div id="sideHolder">
+			<div id="menuToggle" class="hamburger hamburger--emphatic">
+				<div class="hamburger-box">
+					<div class="hamburger-inner"></div>
+				</div>
+			</div>
+			<div class="sideNav animated fadeOutLeft">
+				<a id="aboutButton" class="contentHolder" href="#about">ABOUT</a>
+				<a id="projectsButton" class="contentHolder" href="#projects">PROJECTS</a>
+				<a id="cvButton"class="contentHolder" href="#cv">CURRICULUM VITAE</a>
+			</div>
+		</div>
+
+		<div id="title">
+			RICHARD LE<br> 
+			<div id="subTitle">Student, Junior Developer</div>
+		</div>
+
+		<div id="contentHolder">
+			<div id="about" class="contentBlock">BLOCK 1</div>
+			<div id="projects"class="contentBlock">BLOCK 2</div>
+			<div id="cv" class="contentBlock"> BLOCK 3</div>
+		</div>
 
 
 
 
 
-<script
-src="https://code.jquery.com/jquery-3.3.1.min.js"
-integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-crossorigin="anonymous"></script>	
-<script type="text/javascript" src="js/particles.js"></script>
-<!-- <script type="text/javascript" src="js/main.js"></script> -->
-<script type="text/javascript" src="js/testScene.js"></script>
-<script type="text/javascript" src="js/postProcessingPass.js"></script>
-</body>
-</html>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.min.js"></script>
+		<script
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>	
+		<script type="text/javascript" src="js/particles.js"></script>
+		<!-- <script type="text/javascript" src="js/main.js"></script> -->
+		<script type="text/javascript" src="js/testScene.js"></script>
+		<script type="text/javascript" src="js/postProcessingPass.js"></script>
+	</body>
+	</html>
