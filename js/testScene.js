@@ -11,8 +11,10 @@ var backgroundDiv = document.querySelector('#background');
 backgroundDiv.appendChild( renderer.domElement );
 
 var loader = new THREE.OBJLoader();
+var myModels = {};
 
 loader.load('assets/editedHead.obj', function(object){
+	myModels[0] = object;
 	object.position.x = 2.5;
 	object.rotation.y = 90;
 	scene.add(object);
@@ -75,10 +77,9 @@ var animate = function () {
 
 	cube.rotation.x += 0.01;
 	cube.rotation.y += 0.01;
-
 	cube.position.y = Math.sin(clock.getElapsedTime()) / 2;
 
-	loader.rotation.y += 0.01;
+	myModels[0].rotation.y += 0.01;
 
 	wireFrameIco.rotation.x -= 0.001;
 	wireFrameIco.rotation.y -= 0.001;
