@@ -12,11 +12,12 @@ backgroundDiv.appendChild( renderer.domElement );
 
 var loader = new THREE.OBJLoader();
 
-var bust;
 
 loader.load('assets/editedHead.obj', function(object){
-	bust = object;
+	object.x = 2.5;
+	object.rotation.y = 90;
 	scene.add(object);
+	
 },function ( xhr ) {
 
 		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
@@ -24,11 +25,9 @@ loader.load('assets/editedHead.obj', function(object){
 	},
 	// called when loading has errors
 	function ( error ) {
-
 		console.log( 'An error happened' );
-
 	});
-
+loader.setMaterials('assets/editedHead.mtl');
 var geometry = new THREE.BoxGeometry( 1.5, 1.5, 1.5 );
 var material = new THREE.MeshStandardMaterial( { color: 0xff0051 } );
 var cube = new THREE.Mesh( geometry, material );
