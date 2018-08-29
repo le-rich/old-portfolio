@@ -17,10 +17,10 @@ loader.load('assets/editedHead.obj', function(object){
 	
 	object.rotation.y = 90;
 	scene.add(object);
-	
+	myModels[0] = object;
 	},function ( xhr ) {
 		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-		myModels[0] = object;
+		
 	},
 	// called when loading has errors
 	function ( error ) {
