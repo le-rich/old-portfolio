@@ -12,9 +12,8 @@ backgroundDiv.appendChild( renderer.domElement );
 
 var loader = new THREE.OBJLoader();
 
-
 loader.load('assets/editedHead.obj', function(object){
-	object.x = 2.5;
+	object.position.x = 2.5;
 	object.rotation.y = 90;
 	scene.add(object);
 	
@@ -27,6 +26,7 @@ loader.load('assets/editedHead.obj', function(object){
 	function ( error ) {
 		console.log( 'An error happened' );
 	});
+
 var geometry = new THREE.BoxGeometry( 1.5, 1.5, 1.5 );
 var material = new THREE.MeshStandardMaterial( { color: 0xff0051 } );
 var cube = new THREE.Mesh( geometry, material );
@@ -65,7 +65,6 @@ scene.add(cube);
 scene.add(particles);
 
 cube.position.x = 2.5;
-bust.position,x = 2.5;
 wireFrameIco.position.x = 2;
 camera.position.z = 5;
 
@@ -76,9 +75,6 @@ var animate = function () {
 
 	cube.rotation.x += 0.01;
 	cube.rotation.y += 0.01;
-
-	bust.rotation.x += 0.01;
-	bust.rotation.y += 0.01;
 
 	cube.position.y = Math.sin(clock.getElapsedTime()) / 2;
 	wireFrameIco.rotation.x -= 0.001;
