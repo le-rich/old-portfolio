@@ -5,7 +5,6 @@
 	margin-right:  0;
 	font-family: Montserrat, sans-serif;
 	float: left;
-	background: white;\
 	opacity: 0;
 }
 
@@ -30,12 +29,23 @@
 	background: white;
 	position: absolute;	
 	display: none;
-	margin-left: 10%;
-	text-align: center;
+	text-align: left;
 }
 
 #about{
 
+}
+
+#about_splash{
+	
+}
+
+.contentDiv{
+	padding-top: 5%;
+	padding-bottom: 5%;
+	white-space: normal;
+	margin-left: 25%;
+	margin-right: 15%;
 }
 
 #title{

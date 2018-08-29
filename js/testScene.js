@@ -19,7 +19,7 @@ mtlLoader.load('assets/editedHead.mtl', function(materials){
 	loader.setMaterials(materials).load('assets/editedHead.obj', function(object){
 
 		object.rotation.y = 90;
-		object.position.x = 2.8;
+		object.position.x = 0;
 		object.scale.x = 0.6;
 		object.scale.y = 0.6;
 		object.scale.z = 0.6;
@@ -76,7 +76,7 @@ scene.add(ambientLight);
 scene.add(particles);
 
 cube.position.x = 2.5;
-wireFrameIco.position.x = 2;
+wireFrameIco.position.x = 0;
 camera.position.z = 5;
 
 var clock = new THREE.Clock(true);
@@ -90,7 +90,7 @@ var animate = function () {
 
 	if (myModels[0] != null){
 		myModels[0].rotation.y += 0.01;
-		myModels[0].position.y = Math.sin(clock.getElapsedTime()) * 0.5;
+		myModels[0].position.y = Math.sin(clock.getElapsedTime()) * 0.1;
 	}
 	
 	wireFrameIco.rotation.x -= 0.001;
@@ -110,7 +110,8 @@ function onWindowResize(){
     camera.updateProjectionMatrix();
 
     renderer.setSize( window.innerWidth, window.innerHeight );
-    $(".sideNav").height($("#interactionArea").height());
+    $("#contentHolder").height($("#background").height());
+    $("#contentHolder").width($("#background").width());
 }
 
 
@@ -124,14 +125,20 @@ $(document).ready(function(){
 
 	$("#aboutButton").click(function(){
 		$("#about").fadeToggle("300");
+		$("#projects").hide();
+		$("#cv").hide();
 	});
 
 	$("#projectsButton").click(function(){
 		$("#projects").fadeToggle("300");
+		$("#about").hide();
+		$("#cv").hide();
 	});
 
 	$("#cvButton").click(function(){
 		$("#cv").fadeToggle("300");
+		$("#about").hide();
+		$("#projects").hide();
 	});
 
 });
