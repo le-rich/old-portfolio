@@ -90,7 +90,7 @@ var animate = function () {
 
 	if (myModels[0] != null){
 		myModels[0].rotation.y += 0.01;
-		myModels[0].position.y = Math.sin(clock.getElapsedTime());
+		myModels[0].position.y = Math.sin(clock.getElapsedTime()) * 0.5;
 	}
 	
 	wireFrameIco.rotation.x -= 0.001;
