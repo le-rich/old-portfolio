@@ -123,22 +123,28 @@ $(document).ready(function(){
     	$(".sideNav").toggleClass("fadeOutLeft");
   	});
 
+	$("#homeButton").click(function(){
+		$("#about").fadeOut(300);
+		$("#projects").fadeOut(300);
+		$("#cv").fadeOut(300);
+	});
+
 	$("#aboutButton").click(function(){
 		$("#about").fadeToggle("300");
-		$("#projects").hide();
-		$("#cv").hide();
+		$("#projects").fadeOut(300);
+		$("#cv").fadeOut(300);
 	});
 
 	$("#projectsButton").click(function(){
 		$("#projects").fadeToggle("300");
-		$("#about").hide();
-		$("#cv").hide();
+		$("#about").fadeOut(300);
+		$("#cv").fadeOut(300);
 	});
 
 	$("#cvButton").click(function(){
 		$("#cv").fadeToggle("300");
-		$("#about").hide();
-		$("#projects").hide();
+		$("#about").fadeOut(300);
+		$("#projects").fadeOut(300);
 	});
 
 });
