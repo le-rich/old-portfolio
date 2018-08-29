@@ -11,13 +11,21 @@ var backgroundDiv = document.querySelector('#background');
 backgroundDiv.appendChild( renderer.domElement );
 
 var loader = new THREE.OBJLoader();
+var mtlLoader = new THREE.MTLLoader();
 var myModels = {};
 
-loader.load('assets/editedHead.obj', function(object){
-	
-	object.rotation.y = 90;
-	scene.add(object);
-	myModels[0] = object;
+mtlLoader.load('assets/editedHead.mtl', function(materials){
+	materials.preload();
+	loader.setMaterials(materials).load('assets/editedHead.obj', function(object){
+
+		object.rotation.y = 90;
+		object.position.x = 2.5;
+		object.scale.x = 0.6;
+		object.scale.y = 0.6;
+		object.scale.z = 0.6;
+		scene.add(object);
+		myModels[0] = object;
+
 	},function ( xhr ) {
 		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
 		
@@ -26,6 +34,9 @@ loader.load('assets/editedHead.obj', function(object){
 	function ( error ) {
 		console.log( 'An error happened' );
 	});
+})
+
+
 
 var geometry = new THREE.BoxGeometry( 1.5, 1.5, 1.5 );
 var material = new THREE.MeshStandardMaterial( { color: 0xff0051 } );
