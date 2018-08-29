@@ -72,7 +72,7 @@ pointLight.position.set(25, 50, 25);
 scene.add(wireFrameIco);
 scene.add(pointLight);
 scene.add(ambientLight);
-scene.add(cube);
+//scene.add(cube);
 scene.add(particles);
 
 cube.position.x = 2.5;
