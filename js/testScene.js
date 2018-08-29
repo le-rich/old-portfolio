@@ -10,6 +10,22 @@ renderer.domElement.id = 'threeCanvas';
 var backgroundDiv = document.querySelector('#background');
 backgroundDiv.appendChild( renderer.domElement );
 
+var loader = new THREE.OBJLoader();
+
+loader.load('assets/editedHead.obj', function(object){
+	scene.add(object);
+},function ( xhr ) {
+
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+	},
+	// called when loading has errors
+	function ( error ) {
+
+		console.log( 'An error happened' );
+
+	});
+
 var geometry = new THREE.BoxGeometry( 1.5, 1.5, 1.5 );
 var material = new THREE.MeshStandardMaterial( { color: 0xff0051 } );
 var cube = new THREE.Mesh( geometry, material );
@@ -49,17 +65,16 @@ scene.add(particles);
 
 cube.position.x = 2.5;
 wireFrameIco.position.x = 2;
-
-
-
 camera.position.z = 5;
+
+var clock = new THREE.Clock(true);
 
 var animate = function () {
 	requestAnimationFrame( animate );
 
 	cube.rotation.x += 0.01;
 	cube.rotation.y += 0.01;
-
+	cube.position.y = Math.sin(clock.getElapsedTime()) / 2;
 	wireFrameIco.rotation.x -= 0.001;
 	wireFrameIco.rotation.y -= 0.001;
 

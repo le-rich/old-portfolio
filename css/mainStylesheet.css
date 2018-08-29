@@ -1,7 +1,5 @@
 
 .sideNav{
-	max-width: 15%;
-	min-width: 10%;
 	top: 0;
 	left: 0;
 	margin-right:  0;
@@ -15,24 +13,25 @@
     margin: 20px;
     text-decoration: none;
     height: 2em;
-    min-width: 4%;
     font-size: 1em;
     display: block;
     color: black;
 }
 
 #contentHolder{
-	height: 1080px;
-	margin-left: 10%;
+	height: 100%;
 	align-content: middle;
 }
 
 .contentBlock{
-	height: 100%;
+	float: left;
+	min-height: 100%;
 	width: 100%;
 	background: white;
 	position: absolute;	
 	display: none;
+	margin-left: 10%;
+	text-align: center;
 }
 
 #about{
@@ -40,23 +39,25 @@
 }
 
 #title{
-	font-size: 5em;
+	font-size: 5vw;
 	font-weight: 600;
 	margin-left: 13%;
 	float: left;
 	letter-spacing: 5px;
 	margin-top: 30%;
 	position: absolute;
+	z-index: 0;
 }
 
 #subTitle{
-	font-size: 0.5em;
+	font-size: 2.5vw;
 	font-weight: 400;
 	letter-spacing: normal;
 }
 
 #sideHolder{
 	position: fixed;
+	z-index: 1;
 }
 #menuToggle{
 	float: left;
@@ -100,6 +101,7 @@ body{
 	margin: 0;
 	min-width: 100%;
 	min-height: 100%;
+	height: 100%;
 }
 
 html{
