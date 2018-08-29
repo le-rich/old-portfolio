@@ -19,7 +19,7 @@ mtlLoader.load('assets/editedHead.mtl', function(materials){
 	loader.setMaterials(materials).load('assets/editedHead.obj', function(object){
 
 		object.rotation.y = 90;
-		object.position.x = 2.5;
+		object.position.x = 2.8;
 		object.scale.x = 0.6;
 		object.scale.y = 0.6;
 		object.scale.z = 0.6;
@@ -90,7 +90,7 @@ var animate = function () {
 
 	if (myModels[0] != null){
 		myModels[0].rotation.y += 0.01;
-		myModels[0].rotation.x += 0.01;
+		myModels[0].position.y = Math.sin(clock.getElapsedTime());
 	}
 	
 	wireFrameIco.rotation.x -= 0.001;
