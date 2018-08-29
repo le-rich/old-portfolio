@@ -27,7 +27,6 @@ loader.load('assets/editedHead.obj', function(object){
 	function ( error ) {
 		console.log( 'An error happened' );
 	});
-loader.setMaterials('assets/editedHead.mtl');
 var geometry = new THREE.BoxGeometry( 1.5, 1.5, 1.5 );
 var material = new THREE.MeshStandardMaterial( { color: 0xff0051 } );
 var cube = new THREE.Mesh( geometry, material );
