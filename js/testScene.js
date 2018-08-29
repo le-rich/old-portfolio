@@ -89,7 +89,7 @@ var animate = function () {
 	cube.position.y = Math.sin(clock.getElapsedTime()) / 2;
 
 	if (myModels[0] != null){
-		myModels[0].rotation.y += 0.01;
+		//myModels[0].rotation.y += 0.01;
 		myModels[0].position.y = Math.sin(clock.getElapsedTime());
 	}
 	
