@@ -14,15 +14,13 @@ var loader = new THREE.OBJLoader();
 var myModels = {};
 
 loader.load('assets/editedHead.obj', function(object){
-	myModels[0] = object;
-	object.position.x = 2.5;
+	
 	object.rotation.y = 90;
 	scene.add(object);
 	
-},function ( xhr ) {
-
+	},function ( xhr ) {
 		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-
+		myModels[0] = object;
 	},
 	// called when loading has errors
 	function ( error ) {
@@ -79,8 +77,11 @@ var animate = function () {
 	cube.rotation.y += 0.01;
 	cube.position.y = Math.sin(clock.getElapsedTime()) / 2;
 
-	myModels[0].rotation.y += 0.01;
-
+	if (myModels[0] != null){
+		myModels[0].rotation.y += 0.01;
+		myModels[0].rotation.x += 0.01;
+	}
+	
 	wireFrameIco.rotation.x -= 0.001;
 	wireFrameIco.rotation.y -= 0.001;
 
