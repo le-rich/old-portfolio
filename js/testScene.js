@@ -77,6 +77,9 @@ var animate = function () {
 	cube.rotation.y += 0.01;
 
 	cube.position.y = Math.sin(clock.getElapsedTime()) / 2;
+
+	loader.rotation.y += 0.01;
+
 	wireFrameIco.rotation.x -= 0.001;
 	wireFrameIco.rotation.y -= 0.001;
 
