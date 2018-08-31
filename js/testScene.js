@@ -20,9 +20,9 @@ mtlLoader.load('assets/editedHead.mtl', function(materials){
 
 		object.rotation.y = 90;
 		object.position.x = 0;
-		object.scale.x = 0.4;
-		object.scale.y = 0.4;
-		object.scale.z = 0.4;
+		object.scale.x = 1;
+		object.scale.y = 1;
+		object.scale.z = 1;
 		scene.add(object);
 		myModels[0] = object;
 
@@ -69,7 +69,7 @@ var particles = new THREE.Points(partGeo, partMaterial);
 particles.position.z = -5;
 pointLight.position.set(25, 50, 25);
 
-scene.add(wireFrameIco);
+//scene.add(wireFrameIco);
 scene.add(pointLight);
 scene.add(ambientLight);
 //scene.add(cube);
@@ -94,8 +94,8 @@ var animate = function () {
 		myModels[0].position.y = (Math.sin(clock.getElapsedTime()) * 0.2) - 0.3; 
 	}
 	
-	wireFrameIco.rotation.x -= 0.001;
-	wireFrameIco.rotation.y -= 0.001;
+	wireFrameIco.rotation.x += 0.001;
+	wireFrameIco.rotation.y += 0.001;
 
 	particles.rotation.y += 0.0002;
 
@@ -122,8 +122,8 @@ $(document).ready(function(){
     	$(this).toggleClass("is-active");      //add the class to the clicked element
     	$(".sideNav").toggleClass("fadeInLeft");
     	$(".sideNav").toggleClass("fadeOutLeft");
-    	$("#title").toggleClass("fadeIn");
-    	$("#title").toggleClass("fadeOut");
+    	// $("#title").toggleClass("fadeIn");
+    	// $("#title").toggleClass("fadeOut");
   	});
 
 	$("#homeButton").click(function(){
