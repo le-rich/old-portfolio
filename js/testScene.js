@@ -114,7 +114,7 @@ var lookAtMouse = function(event){
 	var cosAngle = forward.dot(target); // u . v = |u|*|v|*cos(a)
 	var angle = Math.atan2(sinAngle, cosAngle); // atan2(sin(a),cos(a)) = a
 	axis.normalize();
-	myModels[0].rotation.makeRotationAxis(axis, angle);
+	myModels[0].lookAt(axis);
 }
 
 animate();
