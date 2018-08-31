@@ -4,10 +4,16 @@
 	left: 0;
 	margin-right:  0;
 	font-family: Montserrat, sans-serif;
+	font-size: 3vh;
 	float: left;
 	opacity: 0;
 }
 
+
+#sideHolder{
+	position: fixed;
+	z-index: 1;
+}
 .sideNav a {
     margin: 20px;
     text-decoration: none;
@@ -32,20 +38,36 @@
 	text-align: left;
 }
 
-#about{
 
-}
 
 #about_splash{
-	
+	margin-top: 10%;
 }
 
 .contentDiv{
-	padding-top: 5%;
-	padding-bottom: 5%;
 	white-space: normal;
 	margin-left: 25%;
 	margin-right: 15%;
+	margin-top: 0.2em;
+}
+
+.contentTitle{
+	font-family: Montserrat;
+	padding-top: 3%;
+	white-space: normal;
+	margin-left: 25%;
+	margin-right: 15%;
+	margin-bottom: 0;
+	font-size: 1em;
+}
+
+.miniContentHolder{
+	float: left;
+}
+
+#hamburger-container{
+	height: 5%;
+	width: 5%;
 }
 
 #title{
@@ -62,7 +84,6 @@
 	position: absolute;
 	z-index: 0;
 	text-align: center;
-	text-shadow: 0px 1px 5px #f7f7f7;
 }
 
 #subTitle{
@@ -71,10 +92,7 @@
 	letter-spacing: normal;
 }
 
-#sideHolder{
-	position: fixed;
-	z-index: 1;
-}
+
 #menuToggle{
 	float: left;
 	width: 100%;
