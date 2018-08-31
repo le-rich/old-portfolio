@@ -1,4 +1,5 @@
 window.addEventListener( 'resize', onWindowResize, false );
+document.onmousemove = lookatMouse;
 
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
@@ -127,6 +128,7 @@ function onWindowResize(){
     $("#contentHolder").height($("#background").height());
     $("#contentHolder").width($("#background").width());
 }
+
 
 
 $(document).ready(function(){
