@@ -118,7 +118,7 @@ var lookAtMouse = function(event){
 }
 
 animate();
-lookAtMouse();
+//lookAtMouse();
 
 
 function onWindowResize(){
