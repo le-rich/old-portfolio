@@ -105,7 +105,7 @@ var animate = function () {
 }
 
 
-var lookAtMouse = function(event){
+function lookAtMouse(event){
 	var forward = new THREE.Vector3(0,0,-1);
 	var target = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1,   //x
                                     -( event.clientY / window.innerHeight ) * 2 + 1,  //y
@@ -116,7 +116,6 @@ var lookAtMouse = function(event){
 }
 
 animate();
-//lookAtMouse();
 
 
 function onWindowResize(){
