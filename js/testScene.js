@@ -111,8 +111,9 @@ var lookAtMouse = function(event){
                                     0.5 );                                            //z
 	if (myModels[0] != null){
 		myModels[0].lookAt(target);
-		myModels[0].rotateOnAxis(new THREE.Vector3(0,1,0), -80); 
-		myModels[0].rotateOnAxis(new THREE.Vector3(0,0,1), -2);
+		myModels[0].rotateOnAxis(new THREE.Vector3(0,1,0), -80.1); 
+		myModels[0].rotateOnAxis(new THREE.Vector3(0,0,1), 0.5);
+		myModels[0].rotateOnAxis(new THREE.Vector3(1,0,0), 0);
 	}
 }
 
