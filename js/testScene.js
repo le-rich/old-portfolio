@@ -115,6 +115,7 @@ var lookAtMouse = function(event){
 	var angle = Math.atan2(sinAngle, cosAngle); // atan2(sin(a),cos(a)) = a
 	axis.normalize();
 	myModels[0].lookAt(target);
+	myModels[0].rotation.y = myModels[0].rotation.y + 80; 
 }
 
 animate();
