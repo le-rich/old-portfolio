@@ -115,7 +115,7 @@ var lookAtMouse = function(event){
 	var angle = Math.atan2(sinAngle, cosAngle); // atan2(sin(a),cos(a)) = a
 	axis.normalize();
 	myModels[0].lookAt(target);
-	myModels[0].rotateOnWorldAxis(new THREE.Vector3(0,1,0), -80); 
+	myModels[0].rotateOnAxis(new THREE.Vector3(0,1,0), -80); 
 }
 
 animate();
