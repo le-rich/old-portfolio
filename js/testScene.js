@@ -109,10 +109,11 @@ var lookAtMouse = function(event){
 	var target = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1,   //x
                                     -( event.clientY / window.innerHeight ) * 2 + 1,  //y
                                     0.5 );                                            //z
-
-	myModels[0].lookAt(target);
-	myModels[0].rotateOnAxis(new THREE.Vector3(0,1,0), -80); 
-	myModels[0].rotateOnAxis(new THREE.VEctor3(1,0,0), -5);
+	if (myModels[0] != null){
+		myModels[0].lookAt(target);
+		myModels[0].rotateOnAxis(new THREE.Vector3(0,1,0), -80); 
+		myModels[0].rotateOnAxis(new THREE.Vector3(0,0,1), -2);
+	}
 }
 
 animate();
