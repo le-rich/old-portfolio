@@ -124,8 +124,8 @@ function onWindowResize(){
     camera.updateProjectionMatrix();
 
     renderer.setSize( window.innerWidth, window.innerHeight );
-    $("#contentHolder").height($("#background").height());
-    $("#contentHolder").width($("#background").width());
+    //$("#contentHolder").height($("#background").height());
+   	// $("#contentHolder").width($("#background").width());
 }
 
 
