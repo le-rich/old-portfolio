@@ -84,6 +84,13 @@
 	text-align: center;
 }
 
+#titleLine{
+	margin-top: 0.2vh;
+	margin-bottom: 1vh;
+	margin-left: 15%;
+	margin-right: 15%; 
+}
+
 #subTitle{
 	font-size: 5vh;
 	font-weight: 400;

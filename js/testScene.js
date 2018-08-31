@@ -92,6 +92,7 @@ var animate = function () {
 	if (myModels[0] != null){
 		//myModels[0].rotation.y += 0.01;
 		//myModels[0].position.y = (Math.sin(clock.getElapsedTime()) * 0.2) - 0.3; 
+		myModels[0].position.y = -0.3;
 	}
 	
 	wireFrameIco.rotation.x += 0.001;
@@ -109,11 +110,6 @@ var lookAtMouse = function(event){
                                     -( event.clientY / window.innerHeight ) * 2 + 1,  //y
                                     0.5 );                                            //z
 
-	var axis = new THREE.Vector3().cross(forward, target);
-	var sinAngle = axis.length(); // |u x v| = |u|*|v|*sin(a)
-	var cosAngle = forward.dot(target); // u . v = |u|*|v|*cos(a)
-	var angle = Math.atan2(sinAngle, cosAngle); // atan2(sin(a),cos(a)) = a
-	axis.normalize();
 	myModels[0].lookAt(target);
 	myModels[0].rotateOnAxis(new THREE.Vector3(0,1,0), -80); 
 }
