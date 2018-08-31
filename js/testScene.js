@@ -20,9 +20,10 @@ mtlLoader.load('assets/editedHead.mtl', function(materials){
 
 		object.rotation.y = 90;
 		object.position.x = 0;
-		object.scale.x = 0.6;
-		object.scale.y = 0.6;
-		object.scale.z = 0.6;
+		object.position.y = -0.3;
+		object.scale.x = 0.4;
+		object.scale.y = 0.4;
+		object.scale.z = 0.4;
 		scene.add(object);
 		myModels[0] = object;
 
@@ -45,7 +46,7 @@ var ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 var pointLight = new THREE.PointLight(0xffffff, 1);
 
 
-var icoGeo = new THREE.IcosahedronGeometry(3, 1);
+var icoGeo = new THREE.IcosahedronGeometry(2, 1);
 var icoMaterial = new THREE.MeshBasicMaterial({ color: 0x606060, wireframe: true, transparent: true});
 var wireFrameIco = new THREE.Mesh(icoGeo, icoMaterial);
 
@@ -77,6 +78,7 @@ scene.add(particles);
 
 cube.position.x = 2.5;
 wireFrameIco.position.x = 0;
+wireFrameIco.position.y = -0.3;
 camera.position.z = 5;
 
 var clock = new THREE.Clock(true);
@@ -121,6 +123,8 @@ $(document).ready(function(){
     	$(this).toggleClass("is-active");      //add the class to the clicked element
     	$(".sideNav").toggleClass("fadeInLeft");
     	$(".sideNav").toggleClass("fadeOutLeft");
+    	$("#title").toggleClass("fadeIn");
+    	$("#title").toggleClass("fadeOut");
   	});
 
 	$("#homeButton").click(function(){
