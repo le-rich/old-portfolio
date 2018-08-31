@@ -104,10 +104,10 @@ var animate = function () {
 
 
 var lookAtMouse = function(){
-	var forward = new Vector3(0,0,-1);
-	var target = new Vector3().sub(mouse3D, box.position).normalize();
+	var forward = new THREE.Vector3(0,0,-1);
+	var target = new THREE.Vector3().sub(THREE.mouse3D, myModels[0].position).normalize();
 
-	var axis = new Vector3().cross(forward, target);
+	var axis = new THREE.Vector3().cross(forward, target);
 	var sinAngle = axis.length(); // |u x v| = |u|*|v|*sin(a)
 	var cosAngle = forward.dot(target); // u . v = |u|*|v|*cos(a)
 	var angle = Math.atan2(sinAngle, cosAngle); // atan2(sin(a),cos(a)) = a
