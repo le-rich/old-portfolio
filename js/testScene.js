@@ -20,7 +20,7 @@ mtlLoader.load('assets/editedHead.mtl', function(materials){
 
 		object.rotation.y = 90;
 		object.position.x = 0;
-		object.position.y = -0.7;
+		object.position.y = -1.2;
 		object.scale.x = 0.4;
 		object.scale.y = 0.4;
 		object.scale.z = 0.4;
