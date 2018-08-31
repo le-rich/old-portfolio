@@ -20,9 +20,9 @@ mtlLoader.load('assets/editedHead.mtl', function(materials){
 
 		object.rotation.y = 90;
 		object.position.x = 0;
-		object.scale.x = 1;
-		object.scale.y = 1;
-		object.scale.z = 1;
+		object.scale.x = 0.4;
+		object.scale.y = 0.4;
+		object.scale.z = 0.4;
 		scene.add(object);
 		myModels[0] = object;
 
@@ -69,7 +69,7 @@ var particles = new THREE.Points(partGeo, partMaterial);
 particles.position.z = -5;
 pointLight.position.set(25, 50, 25);
 
-//scene.add(wireFrameIco);
+scene.add(wireFrameIco);
 scene.add(pointLight);
 scene.add(ambientLight);
 //scene.add(cube);
