@@ -1,5 +1,4 @@
 window.addEventListener( 'resize', onWindowResize, false );
-document.onmousemove = lookAtMouse;
 
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
@@ -105,7 +104,7 @@ var animate = function () {
 }
 
 
-function lookAtMouse(event){
+var lookAtMouse = function(event){
 	var forward = new THREE.Vector3(0,0,-1);
 	var target = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1,   //x
                                     -( event.clientY / window.innerHeight ) * 2 + 1,  //y
@@ -113,6 +112,7 @@ function lookAtMouse(event){
 
 	myModels[0].lookAt(target);
 	myModels[0].rotateOnAxis(new THREE.Vector3(0,1,0), -80); 
+	myModels[0].rotateOnAxis(new THREE.VEctor3(1,0,0), -5);
 }
 
 animate();
