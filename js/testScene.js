@@ -105,7 +105,9 @@ var animate = function () {
 
 var lookAtMouse = function(){
 	var forward = new THREE.Vector3(0,0,-1);
-	var target = new THREE.Vector3().sub(THREE.mouse3D, myModels[0].position).normalize();
+	var target = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1,   //x
+                                    -( event.clientY / window.innerHeight ) * 2 + 1,  //y
+                                    0.5 );                                            //z
 
 	var axis = new THREE.Vector3().cross(forward, target);
 	var sinAngle = axis.length(); // |u x v| = |u|*|v|*sin(a)
