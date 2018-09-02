@@ -18,7 +18,7 @@ mtlLoader.load('assets/editedHead.mtl', function(materials){
 	materials.preload();
 	loader.setMaterials(materials).load('assets/editedHead.obj', function(object){
 
-		object.rotation.y = 80.1;
+		object.rotation.y = -80.1;
 		object.position.x = 0;
 		object.scale.x = 0.4;
 		object.scale.y = 0.4;
