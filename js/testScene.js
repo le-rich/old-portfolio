@@ -90,9 +90,9 @@ var animate = function () {
 	cube.position.y = Math.sin(clock.getElapsedTime()) / 2;
 
 	if (myModels[0] != null){
-		//myModels[0].rotation.y += 0.01;
-		myModels[0].position.y = (Math.sin(clock.getElapsedTime()) * 0.2) - 0.3; 
-		//myModels[0].position.y = -0.3;
+		myModels[0].rotation.y += 0.01;
+		//myModels[0].position.y = (Math.sin(clock.getElapsedTime()) * 0.2) - 0.3; 
+		myModels[0].position.y = -0.3;
 	}
 	
 	wireFrameIco.rotation.x += 0.001;
