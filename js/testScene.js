@@ -21,11 +21,11 @@ mtlLoader.load('assets/editedHead.mtl', function(materials){
 	materials.preload();
 	loader.setMaterials(materials).load('assets/editedHead.obj', function(object){
 
-		object.rotation.y = 90;
+		object.rotation.y = -80.1;
 		object.position.x = 0;
-		object.scale.x = 0.6;
-		object.scale.y = 0.6;
-		object.scale.z = 0.6;
+		object.scale.x = 0.4;
+		object.scale.y = 0.4;
+		object.scale.z = 0.4;
 		scene.add(object);
 		myModels[0] = object;
 
@@ -47,7 +47,7 @@ var ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 var pointLight = new THREE.PointLight(0xffffff, 1);
 
 
-var icoGeo = new THREE.IcosahedronGeometry(3, 1);
+var icoGeo = new THREE.IcosahedronGeometry(2, 1);
 var icoMaterial = new THREE.MeshBasicMaterial({ color: 0x606060, wireframe: true, transparent: true});
 var wireFrameIco = new THREE.Mesh(icoGeo, icoMaterial);
 
@@ -78,6 +78,7 @@ scene.add(particles);
 
 cube.position.x = 2.5;
 wireFrameIco.position.x = 0;
+wireFrameIco.position.y = -0.3;
 camera.position.z = 5;
 
 var clock = new THREE.Clock(true);
@@ -92,14 +93,29 @@ var animate = function () {
 	//
 	if (myModels[0] != null){
 		myModels[0].rotation.y += 0.01;
-		myModels[0].position.y = Math.sin(clock.getElapsedTime()) * 0.3;
+		//myModels[0].position.y = (Math.sin(clock.getElapsedTime()) * 0.2) - 0.3; 
+		myModels[0].position.y = -0.3;
 	}
 	
-	wireFrameIco.rotation.x -= 0.001;
-	wireFrameIco.rotation.y -= 0.001;
+	wireFrameIco.rotation.x += 0.001;
+	wireFrameIco.rotation.y += 0.001;
 
 	particles.rotation.y += 0.0002;
 	renderer.render( scene, camera );
+}
+
+
+var lookAtMouse = function(event){
+	var forward = new THREE.Vector3(0,0,-1);
+	var target = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1,   //x
+                                    -( event.clientY / window.innerHeight ) * 2 + 1,  //y
+                                    0.5 );                                            //z
+	if (myModels[0] != null){
+		myModels[0].lookAt(target);
+		myModels[0].rotateOnAxis(new THREE.Vector3(0,1,0), -80.1); 
+		myModels[0].rotateOnAxis(new THREE.Vector3(0,0,1), 0.5);
+		myModels[0].rotateOnAxis(new THREE.Vector3(1,0,0), 0);
+	}
 }
 
 animate();
@@ -116,12 +132,15 @@ function onWindowResize(){
 }
 
 
+
 $(document).ready(function(){
 	$(".sideNav").height($("#background").height());
 	$("#menuToggle").click(function() {  //use a class, since your ID gets mangled
     	$(this).toggleClass("is-active");      //add the class to the clicked element
     	$(".sideNav").toggleClass("fadeInLeft");
     	$(".sideNav").toggleClass("fadeOutLeft");
+    	// $("#title").toggleClass("fadeIn");
+    	// $("#title").toggleClass("fadeOut");
   	});
 
 	$("#homeButton").click(function(){

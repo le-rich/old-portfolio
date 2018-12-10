@@ -1,10 +1,8 @@
-
 .sideNav{
 	top: 0;
 	left: 0;
 	margin-right:  0;
 	font-family: Montserrat, sans-serif;
-	font-size: 3vh;
 	float: left;
 	opacity: 0;
 }
@@ -13,12 +11,13 @@
 #sideHolder{
 	position: fixed;
 	z-index: 1;
+	height: 0;
 }
 .sideNav a {
     margin: 20px;
     text-decoration: none;
     height: 2em;
-    font-size: 1em;
+    font-size: 2.5vh;
     display: block;
     color: black;
 }
@@ -26,6 +25,7 @@
 #contentHolder{
 	height: 100%;
 	align-content: middle;
+	z-index: 3;
 }
 
 .contentBlock{
@@ -71,9 +71,9 @@
 }
 
 #title{
-	font-size: 5vw;
+	font-size: 8.5vh;
 	font-weight: 600;
-	margin-top: 30%;
+	margin-bottom: 30%;
 	margin-left: auto;
 	margin-right: auto;
 	left: 50%;
@@ -81,13 +81,20 @@
 	float: left;
 	letter-spacing: 5px;
 
-	position: absolute;
+	position: fixed;
 	z-index: 0;
 	text-align: center;
 }
 
+#titleLine{
+	margin-top: 0.2vh;
+	margin-bottom: 1vh;
+	margin-left: 15%;
+	margin-right: 15%; 
+}
+
 #subTitle{
-	font-size: 2.5vw;
+	font-size: 4vh;
 	font-weight: 400;
 	letter-spacing: normal;
 }
@@ -120,12 +127,6 @@
 	z-index: -100;
 }
 
-#interactionArea{
-	position: absolute;
-	margin-left: 5%;
-	height: 100%;
-	width: 100%;
-}
 
 canvas{
 	display: block;
