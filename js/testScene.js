@@ -4,9 +4,11 @@ var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
 var renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
 
+// Sets the transparency color to black.
 renderer.setClearColor(0x000000, 0.0)
 renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.domElement.id = 'threeCanvas';
+
 var backgroundDiv = document.querySelector('#background');
 backgroundDiv.appendChild( renderer.domElement );
 
@@ -14,6 +16,7 @@ var loader = new THREE.OBJLoader();
 var mtlLoader = new THREE.MTLLoader();
 var myModels = {};
 
+//Load the 3D Head
 mtlLoader.load('assets/editedHead.mtl', function(materials){
 	materials.preload();
 	loader.setMaterials(materials).load('assets/editedHead.obj', function(object){
@@ -40,7 +43,6 @@ mtlLoader.load('assets/editedHead.mtl', function(materials){
 
 var geometry = new THREE.BoxGeometry( 1.5, 1.5, 1.5 );
 var material = new THREE.MeshStandardMaterial( { color: 0xff0051 } );
-var cube = new THREE.Mesh( geometry, material );
 var ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 var pointLight = new THREE.PointLight(0xffffff, 1);
 
@@ -51,7 +53,7 @@ var wireFrameIco = new THREE.Mesh(icoGeo, icoMaterial);
 
 
 var textureLoader = new THREE.TextureLoader();
-var partSprite = textureLoader.load('assets/circle.png');
+var partSprite = textureLoader.load('assets/Flare.png');
 
 var partGeo = new THREE.Geometry();
 
@@ -72,7 +74,6 @@ pointLight.position.set(25, 50, 25);
 scene.add(wireFrameIco);
 scene.add(pointLight);
 scene.add(ambientLight);
-//scene.add(cube);
 scene.add(particles);
 
 cube.position.x = 2.5;
@@ -88,6 +89,7 @@ var animate = function () {
 	cube.rotation.y += 0.01;
 	cube.position.y = Math.sin(clock.getElapsedTime()) / 2;
 
+	//
 	if (myModels[0] != null){
 		myModels[0].rotation.y += 0.01;
 		myModels[0].position.y = Math.sin(clock.getElapsedTime()) * 0.3;
@@ -97,7 +99,6 @@ var animate = function () {
 	wireFrameIco.rotation.y -= 0.001;
 
 	particles.rotation.y += 0.0002;
-
 	renderer.render( scene, camera );
 }
 
